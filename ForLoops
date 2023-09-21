@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+
+public class ForLoops {
+
+	public static void main(String[] args) {
+		
+		//A loop that will display a string 99 times.
+		for (int i = 0; i < 100; i++) {
+				  System.out.println("Hi!");
+				}
+		
+		//A loop that will display every odd number from 0 to 99
+		System.out.println("Odd numbers:");
+		for (int i = 1; i < 100; i+=2) {
+			  System.out.println(i);
+			}
+		//A loop that will display every even number from 0 to 99
+		System.out.println("Even numbers:");
+		for (int i = 0; i < 100; i+=2) {
+			  System.out.println(i);
+			}
+		//The same loop as 3, but in a different way.
+		System.out.println("Even numbers again:");
+		for (int i = 0; i < 100; i++) {
+			if(i%2 == 0) {
+			  System.out.println(i);
+				}
+			}
+		//A loop that will sum up the odd numbers from 0 to 99 and print it at the end.
+		int sum=0;
+		for (int i = 1; i < 100; i+=2) {
+			  sum+=i;
+			}
+		System.out.println("Sum of odd numbers: "+ sum);
+		//A loop that will sum up the even numbers from 0 to 99 and print it at the end.
+		sum=0;
+		for (int i = 0; i < 100; i+=2) {
+			sum+=i;
+			}
+		System.out.println("Sum of even numbers: "+ sum);
+		
+		//A loop that finds a sum of the numbers between two numbers that are given by the user, inclusive.
+		sum=0;
+		System.out.print("First number please:");
+		Scanner input1 = new Scanner(System.in);
+    	int number1 = input1.nextInt();
+    	System.out.print("Second number please:");
+    	//Scanner input2 = new Scanner(System.in);
+    	int number2 = input1.nextInt();
+    	for(int i= number1; i<= number2; i++) {
+    		sum+=i;
+    		//System.out.println(i);
+    	}
+    	System.out.println("Sum of numbers in between: "+ sum);
+    	input1.close();
+		
+	}
+	
+}
