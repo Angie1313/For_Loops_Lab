@@ -46,14 +46,28 @@ public class ForLoops {
 		Scanner input1 = new Scanner(System.in);
     	int number1 = input1.nextInt();
     	System.out.print("Second number please:");
-    	//Scanner input2 = new Scanner(System.in);
+    	
     	int number2 = input1.nextInt();
-    	for(int i= number1; i<= number2; i++) {
+    	int smallnum=0;
+    	int bignum=0;
+    	//finds out which of the two numbers is bigger
+    	if(number1 < number2) {
+    		smallnum=number1;
+    		bignum=number2;
+    	}
+    	if(number2 < number1) {
+    		smallnum=number2;
+    		bignum=number1;
+    	}
+    	//finds the sum of the two numbers, inclusive
+    	for(int i= smallnum; i<= bignum; i++) {
     		sum+=i;
-    		//System.out.println(i);
+    		
     	}
     	System.out.println("Sum of numbers in between: "+ sum);
     	input1.close();
+		
+		
 		
 	}
 	
